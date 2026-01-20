@@ -88,7 +88,7 @@
             color: #ffd700;
         }
 
-        .about, .schedule {
+        .center-text {
             max-width: 1000px;
             margin: auto;
             text-align: center;
@@ -96,7 +96,7 @@
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
@@ -105,15 +105,28 @@
             padding: 30px;
             border-radius: 15px;
             transition: 0.3s;
+            position: relative;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
         }
 
         .card h3 {
             color: #ffd700;
             margin-bottom: 10px;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ffd700;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
         }
 
         .register-buttons {
@@ -144,7 +157,7 @@
 
         @media(max-width:768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
             header {
                 flex-direction: column;
@@ -161,6 +174,7 @@
     <img src="logo.png" alt="MUN Logo">
     <nav>
         <a href="#about">About</a>
+        <a href="#events">Events</a>
         <a href="#committees">Committees</a>
         <a href="#secretariat">Secretariat</a>
         <a href="#register">Register</a>
@@ -171,57 +185,67 @@
 <section class="hero">
     <h1>Punjab Youth Diplomatic Summit</h1>
     <p>Empowering youth through diplomacy, debate, and leadership excellence.</p>
-    <button onclick="location.href='#register'">Register Now</button>
+    <button onclick="location.href='#events'">View Upcoming Events</button>
 </section>
 
 <section id="about">
     <h2>About The Summit</h2>
-    <div class="about">
+    <div class="center-text">
         <p>
             Punjab Youth Diplomatic Summit (PYDS) is a premier Model United Nations
-            conference committed to fostering diplomacy, critical thinking,
-            and global leadership among young minds.
+            platform dedicated to nurturing global leaders through diplomacy,
+            policy-making, and structured debate.
         </p>
+    </div>
+</section>
+
+<section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="cards">
+
+        <div class="card">
+            <span class="badge">Registrations Open</span>
+            <h3>Punjab Youth Diplomatic Summit 2026</h3>
+            <p><strong>📍 Location:</strong> Punjab</p>
+            <p><strong>📅 Dates:</strong> 22–24 August 2026</p>
+            <p>A flagship international MUN conference with diverse committees and global participation.</p>
+        </div>
+
+        <div class="card">
+            <span class="badge">Upcoming</span>
+            <h3>School-Level MUN Conference</h3>
+            <p><strong>📍 Location:</strong> Ludhiana</p>
+            <p><strong>📅 Dates:</strong> October 2026</p>
+            <p>Specially curated for first-time delegates and school students.</p>
+        </div>
+
+        <div class="card">
+            <span class="badge">Upcoming</span>
+            <h3>Diplomacy & Leadership Workshop</h3>
+            <p><strong>📍 Mode:</strong> Online</p>
+            <p><strong>📅 Dates:</strong> December 2026</p>
+            <p>Skill-building workshop on MUNs, public speaking, and international relations.</p>
+        </div>
+
     </div>
 </section>
 
 <section id="committees">
     <h2>Committees</h2>
     <div class="cards">
-        <div class="card">
-            <h3>UNGA</h3>
-            <p>Discussing global peace and security challenges.</p>
-        </div>
-        <div class="card">
-            <h3>UNHRC</h3>
-            <p>Protection of human rights worldwide.</p>
-        </div>
-        <div class="card">
-            <h3>UNSC</h3>
-            <p>Addressing international conflicts and crises.</p>
-        </div>
-        <div class="card">
-            <h3>AIPPM</h3>
-            <p>Indian parliamentary debates and policies.</p>
-        </div>
+        <div class="card"><h3>UNGA</h3><p>Global peace & security</p></div>
+        <div class="card"><h3>UNHRC</h3><p>Human rights protection</p></div>
+        <div class="card"><h3>UNSC</h3><p>International crises</p></div>
+        <div class="card"><h3>AIPPM</h3><p>Indian parliamentary affairs</p></div>
     </div>
 </section>
 
 <section id="secretariat">
     <h2>Secretariat</h2>
     <div class="cards">
-        <div class="card">
-            <h3>Secretary-General</h3>
-            <p>Keshav Bansal</p>
-        </div>
-        <div class="card">
-            <h3>Director-General</h3>
-            <p>To Be Announced</p>
-        </div>
-        <div class="card">
-            <h3>USG</h3>
-            <p>Core Secretariat Team</p>
-        </div>
+        <div class="card"><h3>Secretary-General</h3><p>Keshav Bansal</p></div>
+        <div class="card"><h3>Director-General</h3><p>To Be Announced</p></div>
+        <div class="card"><h3>USGs</h3><p>Core Secretariat Team</p></div>
     </div>
 </section>
 
@@ -234,21 +258,12 @@
     </div>
 </section>
 
-<section class="schedule">
-    <h2>Conference Schedule</h2>
-    <p>
-        Day 1 – Opening Ceremony & Committee Sessions<br>
-        Day 2 – Committee Sessions & Social Night<br>
-        Day 3 – Closing Ceremony & Awards
-    </p>
-</section>
-
 <section id="contact">
     <h2>Contact Us</h2>
-    <div class="about">
+    <div class="center-text">
         <p>Email: pydsmun@gmail.com</p>
         <p>Instagram: @pydsmun</p>
-        <p>Location: Punjab, India</p>
+        <p>Punjab, India</p>
     </div>
 </section>
 
